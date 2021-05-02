@@ -1,0 +1,5 @@
+{
+    "baseUrl": "https://devmalta.bitso.com",
+    "integrationFolder": ".",
+	"testFiles": "bitso.js"
+}
