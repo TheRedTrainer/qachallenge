@@ -20,7 +20,12 @@ The code for the automation challenge was developed using Cypress, so the follow
 
 3. Go to the project directory and then, according to your OS, you need to execute the following cypress command
 
+Windows 
 `C:\\full-path-to-cypress-cmd\cypress.cmd run --env mexMail=#MEXMAIL,argMail=#ARGMAIL,usrPwd=#PASSWORD --config-file "cypress.json" --browser chrome`
+
+Linux 
+`\full-path-to-cypress\cypress run --env mexMail=#MEXMAIL,argMail=#ARGMAIL,usrPwd=#PASSWORD --config-file "cypress.json" --browser chrome`
+
 
 where **#PASSWORD** is the password that will be defined for the bitso test users and **#MEXMAIL** and **#ARGMAIL** are both temporal mails that you should have access to the inbox in order to check the verification codes that are sent during the automated test, because it is needed to ingress that data manually.
 
