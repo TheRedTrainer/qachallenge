@@ -22,7 +22,7 @@ describe('Bitso QA Challenge', () => {
 
   })
 
-  /* Command used for the bitso user creation. This command receives the followinf parameters:
+  /* Command used for the bitso user creation. This command receives the following parameters:
     mail      - Mail for the new Bitso user
     pwd       - Password for the new Bitso user
     country   - Country for the new Bitso User
@@ -54,10 +54,14 @@ describe('Bitso QA Challenge', () => {
   })
 
 
-  /* Command that checks all the cryptos and add a beneficiary for a user logged in. This command receives the followinf parameters:
-    mail      - Mail for the new Bitso user
-    pwd       - Password for the new Bitso user
-    country   - Country for the new Bitso User
+  /* Command that checks all the cryptos and add a beneficiary for a user logged in. This command receives the following parameters:
+    mail            - Mail for the new Bitso user
+    pwd             - Password for the new Bitso user
+    firstName       - First name for the beneficiary
+    lastName        - Last name for the beneficiary
+    secondLastName  - Seconds last name for the beneficiary
+    dateOfBirth     - Date of birth for the beneficiary
+    
   */
   Cypress.Commands.add('checkCryptoAndAddBeneficiary',(mail,pwd,firstName,lastName,secondLastName,dateOfBirth) => {
     // This segment of the code visits the main page, clicks the login link, enters the user login info,
