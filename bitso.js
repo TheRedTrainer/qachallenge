@@ -72,15 +72,15 @@ describe('Bitso QA Challenge', () => {
     cy.get("#client_id").type(mail);
     cy.get("#password").type(pwd);
     cy.get("form").submit();
-    cy.get('.modal',{ timeout: 30000 }).type('{esc}'); 
+    cy.get('.modal').type('{esc}'); 
     cy.get("#language-select").type("English{enter}",{force:true});
     
     
     // Before clicking all the cryptos and asserting the warning, it is necessary to confirm that 
     // the user knows the risk related with crypto currencies    
     cy.get(":nth-child(2) > .Container__StyledContainer-sc-1fkb9ns-0 > .styles__Name-go4zwh-1", { timeout: 10000 }).click({force:true});
-    cy.get(".moon-arrow_deposit",{timeout: 10000}).click({force:true});
-    cy.get("#riskAccepted",{timeout: 10000}).check({force:true})
+    cy.get(".moon-arrow_deposit").click({force:true});
+    cy.get("#riskAccepted").check({force:true})
     cy.get("[data-testid=crypto-risk-warning-button]").click({force:true})
     
 
@@ -90,8 +90,8 @@ describe('Bitso QA Challenge', () => {
     let i = 2;
     for ( i = 2 ; i <= 10 ; i++) {
       cryptoId = ":nth-child("+i+") > .Container__StyledContainer-sc-1fkb9ns-0 > .styles__Name-go4zwh-1"
-      cy.get(cryptoId, { timeout: 10000 }).click({force:true});
-      cy.get(".moon-arrow_deposit",{timeout: 10000}).click({force:true});
+      cy.get(cryptoId).click({force:true});
+      cy.get(".moon-arrow_deposit").click({force:true});
 
       // For some reason, only the warning message for the last crypto (:nth-child(10) ) index includes 
       // a whitespace before the text "Increase my limit" so it's necessary to use a different text for the assertion

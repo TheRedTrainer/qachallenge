@@ -27,9 +27,9 @@ Linux
 `\full-path-to-cypress\cypress run --env mexMail=#MEXMAIL,argMail=#ARGMAIL,usrPwd=#PASSWORD --config-file "cypress.json" --browser chrome`
 
 
-where **#PASSWORD** is the password that will be defined for the bitso test users and **#MEXMAIL** and **#ARGMAIL** are both temporal mails that you should have access to the inbox in order to check the verification codes that are sent during the automated test, because it is needed to ingress that data manually.
+where **#PASSWORD** is the password that will be defined for the bitso test users (a valid working password that could be used is "Password-5Tacos") and **#MEXMAIL** and **#ARGMAIL** are both temporal mails that you should have access to the inbox in order to check the verification codes that are sent during the automated test, because it is needed to ingress that data manually.
 
-I suggest to use the https://temp-mail.org service in order to get valid mail addresses that you can check their inbox.
+I suggest to open  https://temp-mail.org in two private session from different browsers in order to get valid mail addresses that you can check their inbox.
 
 All the env variables should be enclosed by "" like mexMail="mex@example.com", argMail="arg@example.com", usrPwd="Password". You also need to be sure that cypress.json and bitso.js are located on the same folder. Finally, check that the path to cypress.cmd is correct, usually is located (if you are using windows) on C:\Users\#username\node_modules\.bin\cypress.cmd
 

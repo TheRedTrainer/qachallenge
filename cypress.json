@@ -1,5 +1,6 @@
 {
     "baseUrl": "https://devmalta.bitso.com",
     "integrationFolder": ".",
-	"testFiles": "bitso.js"
+	"testFiles": "bitso.js",
+	"defaultCommandTimeout": 40000
 }
